@@ -1,25 +1,19 @@
-import 'package:final_project/loginScreen.dart';
+import 'package:final_project/pages/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-class toDOlistPage extends StatefulWidget {
+class toDOlistPage extends StatelessWidget {
   const toDOlistPage({Key? key}) : super(key: key);
 
   @override
-  _toDOlistPageState createState() => _toDOlistPageState();
-}
-
-class _toDOlistPageState extends State<toDOlistPage> {
-  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('page 2')),
-      body: Center(child: RaisedButton(
-        onPressed: () {
-          Navigator
-              .pop(context);
-        },
-        child: Text('Go Back'),
-      )),
+    return MaterialApp(
+      theme: ThemeData(
+        primaryColor: Colors.red,
+        accentColor: Colors.redAccent,
+      ),
+      title: 'ToDo Task provider',
+      home: HomePage(),
     );
   }
 }
